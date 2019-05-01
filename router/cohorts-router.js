@@ -64,7 +64,7 @@ router.put("/:id", async (req, res) => {
       const editCohort = await cohortsDB("cohorts")
         .where({ id })
         .first();
-      res.status(201).json(editCohort);
+      res.status(200).json(editCohort);
     } else {
       res.status(404).json({
         message: "Could not get data for cohorts"
